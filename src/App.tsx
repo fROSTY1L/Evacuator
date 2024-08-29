@@ -1,3 +1,4 @@
+import { ConfigProvider } from "antd"
 import Content from "./layout/Content"
 import Header from "./layout/Header"
 import GlobalStyles from "./styles/GlobalStyles"
@@ -8,7 +9,7 @@ function App() {
     <>
       <GlobalStyles/>
       <Header/>
-      <Content/>
+      <Content/> 
     </>
   )
 }

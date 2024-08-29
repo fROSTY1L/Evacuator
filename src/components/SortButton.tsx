@@ -1,10 +1,11 @@
 import React from 'react'
+import { SortButtonWrap } from '../styles/Component styles/SortButton.style'
 
 const SortButton = () => {
   return (
-    <div>
+    <SortButtonWrap>
       
-    </div>
+    </SortButtonWrap>
   )
 }
 

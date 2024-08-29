@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 const Wrap = styled.div`
-    height: 156px;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 100px;
+    margin: 0 5vw;
+    font-size: 1vw;
 `
 
 const Logo = styled.div`
-    width: 9%;
+    width: 9vw;
 `
 const LogoImg = styled.img`
     width: 100%;
 `
 const MainButtons = styled.div`
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,13 +30,7 @@ const Nav = styled.div`
 const NavButton = styled.div`
     cursor: pointer;
 `
-
-const AddButton = styled.div`
-    background-color: #00A0E2;
-    color: #FFFFFF;
-    padding: 16px 36px;
-    border-radius: 50px;
-    text-align: center;
+const ButtonAnimation = `
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -49,5 +44,13 @@ const AddButton = styled.div`
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 `
+const AddButton = styled.div`
+    background-color: #00A0E2;
+    color: #FFFFFF;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+    text-align: center;
+    ${ButtonAnimation}
+`
 
-export {Wrap, Logo, LogoImg, Nav, NavButton, AddButton, MainButtons}
+export {Wrap, Logo, LogoImg, Nav, NavButton, AddButton, MainButtons, ButtonAnimation}

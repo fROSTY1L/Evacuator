@@ -1,6 +1,6 @@
 import React from 'react'
-import location from '../assets/weui_location-filled.png'
-import { CardAddress, CardAddressTitle, CardAddressTitleImg, CardAddressTitleImgWrap, CardAddressWrap, CardContactsWrap, CardContent, CardImg, CardImgWrap, CardInfo, CardInfoPrice, CardInfoTitle, CardInfoWrap, CardTitle, CardWrap } from '../styles/Component styles/Card.style'
+import { EnvironmentOutlined, PhoneFilled, PhoneOutlined, WechatOutlined } from '@ant-design/icons'
+import { CardAddress, CardAddressTitle, CardAddressWrap, CardChat, CardCommentary, CardContactsWrap, CardContent, CardId, CardImg, CardImgWrap, CardInfo, CardInfoPrice, CardInfoTitle, CardInfoWrap, CardPhone, CardTitle, CardWrap } from '../styles/Component styles/Card.style'
 
 interface CardProps {
     id: string,
@@ -12,6 +12,7 @@ interface CardProps {
     priceSuburban: number | null,
     phoneNumber: string | null,
     address: string | null,
+    comment: string,
     img: string
 
 }
@@ -48,17 +49,29 @@ const Card = (props: CardProps) => {
         <CardContactsWrap>
           <CardAddressWrap>
             <CardAddressTitle>
-              <CardAddressTitleImgWrap>
-                <CardAddressTitleImg src={location} alt=""/>
-              </CardAddressTitleImgWrap>
+              <EnvironmentOutlined />
               Место стоянки
             </CardAddressTitle>
             <CardAddress>
-              {props.address}
+              <p>{props.address}</p>
             </CardAddress>
           </CardAddressWrap>
+          <CardPhone>
+            <PhoneOutlined rotate={110}/>
+            <p>{props.phoneNumber}</p>
+          </CardPhone>
+          <CardChat>
+            <WechatOutlined />
+            <p>Написать в чат</p>
+          </CardChat>
+          <CardId>
+            ID объявления {props.id} 
+          </CardId>
         </CardContactsWrap>
       </CardContent>
+      <CardCommentary>
+        {props.comment}
+      </CardCommentary>
     </CardWrap>
   )
 }

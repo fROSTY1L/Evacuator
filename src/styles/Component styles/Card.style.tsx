@@ -121,7 +121,7 @@ const CardId = styled.div`
 `
 const CardCommentary = styled.div`
     padding: 2vh 3vw;
-    font-size: 2.5vh;
+    font-size: 1vw;
 `
 
 export { CardContactsWrap, CardCommentary, CardImg, CardId, CardChat, CardImgWrap, CardPhone, CardInfo, CardInfoWrap, CardInfoPrice, CardInfoTitle, CardWrap, CardTitle, CardContent, CardAddress, CardAddressWrap, CardAddressTitle }

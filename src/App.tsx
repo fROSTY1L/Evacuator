@@ -9,8 +9,9 @@ function App() {
     <>
       <GlobalStyles/>
       <Header/>
-      <Content/> 
+      <Content/>    
     </>
+          
   )
 }
 
